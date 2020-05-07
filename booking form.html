@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>Booking Form</title>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { 
+  margin: 0;
+  }
+form {
+position: relative;
+  left: 800px;
+  outline:none
+}
+#cno  {
+position: relative;
+  left: 300px;
+
+}
+#rd {
+position: relative;
+  left: 300px;
+
+}
+#cnu  {
+position: relative;
+  left: 300px;
+
+}
+#rda {
+position: relative;
+  left: 300px;
+
+}
+
+#bcar{
+position: relative;
+  left: 200px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button{
+background-color: #ffffff;
+  border: none;
+  color: black;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+img{
+  margin:0;	
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  }
+#btn2{
+  position: relative;
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;}
+</style>
+</head>
+<body>
+<div >
+<img src="img.png" alt="Image not available" width="500" height="500">
+<form>  
+<br><br>
+<h2>Booking details</h2><br><br>
+
+<label for="name" >Name</label><br>
+<input type="text" id="name" name="name" Placeholder="Enter your name" value="" required><br>
+<label for="cno" id="cnu">Contact number</label><br>
+<input type="tel" id="cno" name="cno" pattern="[789][0-9]{9}" pattern="^\d{10}$" Placeholder="Enter mobile no." value="" required><br>
+<label for="id">Issue Date</label><br>
+<input type="date" id="id" name="date" required><br>
+<label for="rd" id="rda" >Return Date</label><br>
+<input type="date" id="rd" name="date" required><br>
+<br>
+<a href="index.html" id="btn2">Back</a>
+<input type="button" onclick="results()" value="Book car" id="bcar"><br><br>
+<h2>Your booking details will display here</h2>
+<p> Your name:&nbsp&nbsp&nbsp<span id='display_message'></span></p>
+<p>Contact number:&nbsp&nbsp&nbsp<span id='display_messag'></span></p>
+<p>Issue date:&nbsp&nbsp&nbsp <span id='display_messa'></span></p>
+<p>Return date:&nbsp&nbsp&nbsp<span id='display_mess'></span></p>
+</form>
+ <script type="text/JavaScript"> 
+  function results(){
+            var name = document.getElementById("name").value;
+            display_message.innerHTML= name;
+			var cno = document.getElementById("cno").value;
+            display_messag.innerHTML= cno;
+			var id = document.getElementById("id").value;
+            display_messa.innerHTML= id;
+			var rd = document.getElementById("rd").value;
+            display_mess.innerHTML= rd;
+			alert("Booking confirmed!");
+        }
+</script> 
+
+
+
+
+
+</div>
+</body>
+</html>
